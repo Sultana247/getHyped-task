@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  overflow: hidden; /* Clips everything outside the button */
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* THE ORIGINAL TEXT */
+.norm-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: black;
+  transition: transform 0.1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/* THE RED LAYER (The "Flash") */
+.red-layer {
+  position: absolute;
+  top: 120%; /* Start below */
+  left: 0;
+  width: 100%;
+  height: 150%;
+  transform: skewY(-10deg); /* The Angle */
+  background-color: red;
+  transition: top 0.1s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: 1;
+}
+
+/* THE BLACK OVERLAY (The Final Background) */
+.overlay {
+  position: absolute;
+  top: 100%; /* Start below */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* DELAY: This makes the red visible for a split second */
+  transition: top 0.1s cubic-bezier(0.7, 0, 0.3, 1) 0.08s; 
+  z-index: 2;
+}
+
+.overlay .text {
+  color: white;
+}
+
+/* HOVER ANIMATIONS */
+.container:hover .norm-text {
+  transform: translateY(-100%); /* Original text slides OFF the top */
+}
+
+.container:hover .red-layer {
+  top: 0; /* Red slides ONTO the button */
+}
+
+.container:hover .overlay {
+  top: 0; /* Black slides ONTO the button with a tiny delay */
+}
+.modal-animation{
+
+}
+#my_modal_3[open] .getresult-btn {
+  transform: translateY(0);
+  opacity: 1;
+}

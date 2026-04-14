@@ -2,36 +2,105 @@ import React from 'react';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { BsFire } from "react-icons/bs";
 import { Link } from 'react-router';
+import './Header.css';
+import { Reoverlay, ModalWrapper } from 'reoverlay';
 const Header = () => {
     const menuItems = (
         <>
-            <Link to="/expertises"><button className='px-2 rounded-lg'>Expertises</button></Link>
-            <Link to="/work"><button className='px-2 rounded-lg'>Work</button></Link>
-            <Link to="/about"><button className='px-2 rounded-lg'>About</button></Link>
-            <Link to="/contact"><button className='px-2 rounded-lg'>Contact</button></Link>  
+            <Link to="/expertises" className='container '>
+                <button className='px-2 py-2 rounded-lg norm-text'>
+                    Expertises
+                </button>
+                <div className='red-layer'></div>
+                <div class="overlay">
+                    <div class="text">Expertises</div>
+                </div>
+            </Link>
+            <Link to="/work" className='container '>
+                <button className='px-2 py-2 rounded-lg norm-text'>
+                    Work
+                </button>
+                <div className='red-layer'></div>
+                <div class="overlay">
+                    <div class="text">Work</div>
+                </div>
+            </Link>
+            <Link to="/about" className='container '>
+                <button className='px-2 py-2 rounded-lg norm-text'>
+                    About
+                </button>
+                <div className='red-layer'></div>
+                <div class="overlay">
+                    <div class="text">About</div>
+                </div>
+            </Link>
+            <Link to="/contact" className='container '>
+                <button className='px-2 py-2 rounded-lg norm-text'>
+                    Contact
+                </button>
+                <div className='red-layer'></div>
+                <div class="overlay">
+                    <div class="text">Contact</div>
+                </div>
+            </Link>
+
         </>
-    )
+    );
+    const menuMobile =
+        <>
+            <Link to={'/expertises'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>Expertises</button></Link>
+            <Link to={'/work'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>Work</button></Link>
+            <Link to={'/about'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>About</button></Link>
+            <Link to={'/contact'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>Contact</button></Link>
+        </>
+
     return (
         <div>
             <div className="navbar items-center">
                 <div className="navbar-start">
-                  <img src="https://i.ibb.co.com/F4Qs5vyp/logo.png" alt="get hyped logo" className="h-15 w-40 lg:w-45" />
+                    <img src="https://i.ibb.co.com/F4Qs5vyp/logo.png" alt="get hyped logo" className="h-15 w-40 lg:w-45 z-10" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 bg-white rounded-lg py-2 gap-3 font-bold text-sm">
+                    <ul className="menu menu-horizontal px-1 bg-white rounded-lg py-1 items-center  font-bold text-sm">
                         {menuItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden bg-fuchsia-200 rounded-lg px-2 py-2 text-2xl">
-                            <HiOutlineMenuAlt4></HiOutlineMenuAlt4>
+                        <div role="button" className="btn btn-ghost lg:hidden bg-fuchsia-200 rounded-lg px-2 py-2 text-2xl" >
+                            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                            <button className="" onClick={() => document.getElementById('my_modal_3').showModal()}>
+                                <HiOutlineMenuAlt4></HiOutlineMenuAlt4>
+                            </button>
+                            <dialog id="my_modal_3" className="modal p-5 ">
+                                
+                                <div className="modal-box modal-animation rounded-xl bg-fuchsia-300 h-full w-full max-w-none max-h-none m-0  p-5 flex flex-col justify-center relative">
+
+                                    <form method="dialog">
+                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-5 top-5 bg-white text-2xl">✕</button>
+                                        <img
+                                            src="https://i.ibb.co.com/F4Qs5vyp/logo.png"
+                                            alt="get hyped logo"
+                                            className="h-15 w-40 lg:w-45 absolute left-5 top-5"
+                                        />
+                                    </form>
+
+                                    <div className=''>
+                                        <ul className='flex flex-col gap-4 font-bold z-20 text-center  pt-5'>
+                                        {menuMobile}
+                                    </ul>
+                                    </div>
+                                    <div className='flex justify-center'>
+                                        <button className="btn md:w-1/3 py-8 mt-10 md:mt-0 rounded-2xl flex justify-center getresult-btn bg-black text-white text-2xl">Get Results <div className='bg-white rounded-lg px-2 py-2' ><BsFire className='text-orange-600'></BsFire></div></button>
+                                    </div>
+                                </div>
+                                
+                            </dialog>
+
                         </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {menuItems}
-                        </ul>
+
+
+
                     </div>
                     <div className='hidden lg:block'>
                         <button className="btn px-2 py-3 rounded-2xl flex justify-center bg-fuchsia-200">Get Results <div className='bg-white rounded-lg px-2 py-2' ><BsFire className='text-orange-600'></BsFire></div></button>
