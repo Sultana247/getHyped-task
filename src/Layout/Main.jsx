@@ -5,10 +5,12 @@ import Footer from '../Shared Components/Footer';
 
 const Main = () => {
     return (
-        <div className='max-w-7xl md:max-w-svw mx-auto p-5 bg-orange-50 inter-font'>
-        <Header></Header>
+        <div className='max-w-7xl md:max-w-svw mx-h-screen  bg-orange-50 inter-font'>
+        <div className='px-5 pt-5'>
+            <Header></Header>
         <Outlet></Outlet>
         <Footer></Footer>
+        </div>
         </div>
     );
 };

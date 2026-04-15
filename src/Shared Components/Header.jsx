@@ -4,48 +4,9 @@ import { BsFire } from "react-icons/bs";
 import { Link } from 'react-router';
 import './Header.css';
 import { Reoverlay, ModalWrapper } from 'reoverlay';
+import useMenuItems from '../hooks/useMenuItems';
 const Header = () => {
-    const menuItems = (
-        <>
-            <Link to="/expertises" className='container '>
-                <button className='px-2 py-2 rounded-lg norm-text'>
-                    Expertises
-                </button>
-                <div className='red-layer'></div>
-                <div class="overlay">
-                    <div class="text">Expertises</div>
-                </div>
-            </Link>
-            <Link to="/work" className='container '>
-                <button className='px-2 py-2 rounded-lg norm-text'>
-                    Work
-                </button>
-                <div className='red-layer'></div>
-                <div class="overlay">
-                    <div class="text">Work</div>
-                </div>
-            </Link>
-            <Link to="/about" className='container '>
-                <button className='px-2 py-2 rounded-lg norm-text'>
-                    About
-                </button>
-                <div className='red-layer'></div>
-                <div class="overlay">
-                    <div class="text">About</div>
-                </div>
-            </Link>
-            <Link to="/contact" className='container '>
-                <button className='px-2 py-2 rounded-lg norm-text'>
-                    Contact
-                </button>
-                <div className='red-layer'></div>
-                <div class="overlay">
-                    <div class="text">Contact</div>
-                </div>
-            </Link>
-
-        </>
-    );
+    const menuItems= useMenuItems();
     const menuMobile =
         <>
             <Link to={'/expertises'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>Expertises</button></Link>
@@ -56,7 +17,7 @@ const Header = () => {
 
     return (
         <div>
-            <div className="navbar items-center">
+            <div className="navbar items-center mb-18">
                 <div className="navbar-start">
                     <img src="https://i.ibb.co.com/F4Qs5vyp/logo.png" alt="get hyped logo" className="h-15 w-40 lg:w-45 z-10" />
                 </div>
@@ -103,7 +64,7 @@ const Header = () => {
 
                     </div>
                     <div className='hidden lg:block'>
-                        <button className="btn px-2 py-3 rounded-2xl flex justify-center bg-fuchsia-200">Get Results <div className='bg-white rounded-lg px-2 py-2' ><BsFire className='text-orange-600'></BsFire></div></button>
+                        <button className="btn px-2 py-3 rounded-2xl flex justify-center bg-fuchsia-300">Get Results <div className='bg-white rounded-lg px-2 py-2' ><BsFire className='text-orange-600'></BsFire></div></button>
                     </div>
                 </div>
             </div>

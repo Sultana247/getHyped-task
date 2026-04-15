@@ -64,8 +64,11 @@
 .container:hover .overlay {
   top: 0; /* Black slides ONTO the button with a tiny delay */
 }
-.modal-animation{
 
+.getresult-btn{
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 #my_modal_3[open] .getresult-btn {
   transform: translateY(0);
