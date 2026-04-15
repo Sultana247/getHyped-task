@@ -13,9 +13,10 @@ import { FaTiktok } from "react-icons/fa";
 
 
 const Footer = () => {
+    // Button tilts
     const [manualTilt1, setManualTilt1] = useState({ x: 0, y: 0 });
     const [manualTilt2, setManualTilt2] = useState({ x: 0, y: 0 });
-
+    // mouse monve and popups
     const colors = [
         "bg-rose-500",
         "bg-amber-400",
@@ -59,6 +60,7 @@ const Footer = () => {
             setPopups((prev) => prev.filter((p) => p.id !== id));
         }, 1200);
     };
+    // Scrool part
     // 1. Track the scroll progress of the page
     const { scrollYProgress } = useScroll();
 
