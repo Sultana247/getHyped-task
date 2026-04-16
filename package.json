@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "@wethegit/react-autoplay-video": "^2.0.0",
     "motion": "^12.38.0",
     "react": "^19.2.4",
     "react-curved-text": "^3.0.1",

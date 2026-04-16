@@ -76,7 +76,7 @@ const Footer = () => {
         <div className=''>
             <div
                 onMouseMove={handleMouseMove}
-                className="relative top-45"
+                className="relative hidden md:block md:top-45 lg:top-45"
             >
                 <div className='flex flex-col gap-8 justify-center items-center'>
                     <h1 className="font-bold text-3xl md:text-5xl lg:text-[100px]">
@@ -150,66 +150,66 @@ const Footer = () => {
             </div>
 
             {/* curved text and circle */}
-            <div className=''>
-            
+            <div className='hidden md:block'>
+
 
                 <motion.div
                     style={{ rotate }} // handles the scroll rotation
-                    className="relative top-18 -right-10/12 w-40 h-40 flex z-20 items-center justify-center bg-fuchsia-300 rounded-full transform rotate-40"
+                    className="relative md:top-38 lg:top-18 md:-right-7/10 lg:-right-10/12 w-20 h-20 md:w-40 md:h-40  flex z-20 items-center justify-center bg-fuchsia-300 rounded-full transform rotate-40"
                 >
                     <span className="absolute font-extrabold  text-5xl z-10">GH</span>
 
                     {/* The Rotating Text */}
-                    <ReactCurvedText
-                        width={160}
-                        height={160}
-                        cx={80}
-                        cy={80}
-                        rx={55}
-                        ry={55}
-                        startOffset={0}
-                        reversed={true}
-                        text="GET HYPED  •  GET NOTICED  •  GET RESULTS  •  "
-                        textProps={{
-                            style: {
-                                fontSize: 12, // Smaller font looks more like your reference image
-                                fontWeight: 'normal',
-                                letterSpacing: '2px', // This closes the gap
-                                textTransform: 'uppercase'
-                            }
-                        }}
-                        tspanProps={{ dy: -5 }}
-                    />
+                    <div className="w-20 md:w-70 lg:w-40 aspect-square">
+                        <ReactCurvedText
+                            width={160}
+                            height={160}
+                            cx={80}
+                            cy={80}
+                            rx={60}
+                            ry={60}
+                            startOffset={0}
+                            reversed
+                            text="GET HYPED • GET NOTICED • GET RESULTS •"
+                            textProps={{
+                                style: {
+                                    fontSize: 14,
+                                    letterSpacing: "2px",
+                                    textTransform: "uppercase",
+                                },
+                            }}
+                        />
+                    </div>
                 </motion.div>
             </div>
             {/* footer's angle part */}
-            <div className="w-full h-[280px] relative overflow-hidden">
+            <div className="w-full h-[800px] md:h-[580px] lg:h-[280px] relative overflow-hidden ">
                 {/* Inner Layer - Removed opacity-10 class */}
                 <div
-                    className="bg-amber-950/10 rounded-t-[20px] w-full h-full relative z-10"
+                    className="bg-amber-950/10 rounded-t-[20px] w-full  h-full relative z-10"
                     style={{
                         clipPath: "polygon(0% 60%, 100% 0%, 100% 100%, 0% 100%)",
                     }}
                 >
 
-                    <div className='flex z-30 '>
+                    <div className='flex flex-col lg:flex-row  '>
                         <div className='relative h-full w-full '>
                             <img
                                 src="https://i.ibb.co.com/F4Qs5vyp/logo.png"
                                 alt="logo"
-                                className='w-[340px] h-[350px] text-white absolute  top-5 2 left-0 rounded-t-[20px] object-contain'
+                                className='-rotate-40 md:rotate-0 w-[420px] md:w-[200px] lg:w-[350px] md:h-[200px] lg:h-[350px] text-white absolute top-68 md:top-64 lg:top-5 2 left-0 rounded-t-[20px] object-contain'
                             />
                         </div>
-                        <div className=' relative top-22'>
-                            <div className='flex gap-8 pr-12'>
+                        <div className=' relative top-130 md:top-100 lg:top-22 md:px-8 lg:p-0 mx-5'>
+                            <div className='flex flex-col md:flex-row md:gap-25 lg:gap-8 pr-12'>
                                 <div className='flex flex-col gap-2'>
                                     {/* menu items */}
                                     <div className='flex gap-2 text-[14px] mb-3 font-bold'>
                                         {menuItems}
                                     </div>
                                     {/* social icons */}
-                                    <div className='flex gap-2 items-center'>
-                                        <h4 className='font-bold pr-3'>Follow us</h4>
+                                    <div className='flex gap-2 items-center justify-center'>
+                                        <h4 className='font-bold pr-3 hidden  md:block '>Follow us</h4>
                                         {/* linked in */}
                                         <Tilt tiltEnable={false} scale={scale} transitionSpeed={2500}>
                                             <div className="background-stripes scale-no-tilt">
@@ -253,23 +253,25 @@ const Footer = () => {
 
                                     </div>
                                     {/* copyright */}
-                                    <div className='flex text-base-content text-[11px] mt-12 mb-2'>
+                                    <div className='text-base-content md:text-[12px]  lg:text-[11px] mt-12 mb-2 hidden md:flex'>
                                         <p> © {new Date().getFullYear()} Get Hyped</p>
                                         <a href='#' className='pl-30 hover:text-red-500'> © Design by Dylan</a>
                                     </div>
                                 </div>
-                                <div className='w-1/2'>
-                                    <h4 className='font-bold'>Contact</h4>
+                                <div className='w-1/2 text-[16px] mx-25 mt-5 md:mx-0 md:mt-0'>
+                                    <h4 className='font-bold hidden md:block'>Contact</h4>
                                     <div className='flex flex-col gap-1'>
                                         <a href='#' className='text-[11px]  hover:text-red-500 font-bold'>info@gethyped.nl</a>
-                                    <a href='#' className='text-[11px]  hover:text-red-500 font-bold'>+31 6 1533 7496</a>
+                                        <a href='#' className='text-[11px]  hover:text-red-500 font-bold'>+31 6 1533 7496</a>
                                     </div>
 
-                                    <h4 className='font-bold pt-3'>Address</h4>
+                                    <h4 className='font-bold pt-3 hidden md:block'>Address</h4>
                                     <div className='flex flex-col gap-1'>
                                         <a href='#' className='text-[11px]  hover:text-red-500 font-bold'>Beltrumsestraat 6,<br />7575 AG Oldenzaal</a>
-                                   
-                                    <a href='#' className='pt-2 hover:text-red-500 text-[11px] text-base-content'>Privacyvoorwaarden</a>
+
+                                        <a href='#' className='pt-2 hover:text-red-500 text-[11px] text-base-content'>Privacyvoorwaarden</a>
+                                        <p className='pt-2 block text-[11px] md:hidden'> © {new Date().getFullYear()} Get Hyped</p>
+                                        <a href='#' className='pt-2 text-[11px] block md:hidden hover:text-red-500'> © Design by Dylan</a>
                                     </div>
                                 </div>
 
@@ -278,6 +280,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            
 
 
 
