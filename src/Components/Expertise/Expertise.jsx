@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from "motion/react"
 // Import Swiper styles
 import 'swiper/css';
@@ -57,30 +57,32 @@ const Expertise = () => {
 
 
     return (
-        <div className="md:h-[800px] lg:h-[500vh] relative md:py-75 lg:py-45 ">
+        
+        <div className="h-[410vh] md:h-[550vh] lg:h-[500vh] relative py-25 md:py-75 lg:py-45 ">
             {slides.map((slide, index) => {
-               const start = index * 0.25;
-        const end = index === slides.length - 1
-  ? 1  
-  : start + 0.25;
+                const start = index * 0.25;
+                const end = index === slides.length - 1
+                    ? 1
+                    : start + 0.25;
 
-        const scale = useTransform(
-          scrollYProgress,
-          [start, end],
-          [0.9, 1.001]
-        );
+                const scale = useTransform(
+                    scrollYProgress,
+                    [start, end],
+                    [0.9, 1.001]
+                );
 
-        const opacity = useTransform(
-          scrollYProgress,
-          [start, end],
-          [1, 1]
-        );
+                const opacity = useTransform(
+                    scrollYProgress,
+                    [start, end],
+                    [1, 1]
+                );
 
-        const y = useTransform(
-          scrollYProgress,
-          [start, end],
-          [0, -50]
-        );
+                const y = useTransform(
+                    scrollYProgress,
+                    [start, end],
+                    [0, -150]
+                );
+                
 
                 return (
                     <motion.div
@@ -91,17 +93,18 @@ const Expertise = () => {
                             scale,
                             zIndex: slides.length + index,
                         }}
-                        className="sticky md:top-[80px] lg:top-[80px]  h-screen "
+                        className="h-screen snap-start md:sticky md:top-[80px] "
                     >
                         <div className={` p-10 w-full  ${slide.bg} rounded-4xl shadow-xl flex flex-col text-4xl  `}>
                             <div className=''>
                                 <button className={slide.id === 1 ? `px-2 py-2 rounded-lg font-medium text-lg bg-amber-950/10` : `px-2 py-2 rounded-lg font-bold text-lg bg-white `}>Expertise</button>
+                                <h2 className='text-[40px] md:text-[50px] lg:text-[90px] roboto-font font-bold pt-2 md:pt-8 lg:pt-4'>{slide.title}</h2>
+                                <div className='flex flex-col flex-col-reverse lg:flex-row justify-between gap-4 pt-5 mt-4'>
 
-                                <div className='flex justify-between gap-4 mt-4'>
                                     <div>
-                                        <h2 className='text-xl md:text-5xl lg:text-[90px] roboto-font font-bold pt-4'>{slide.title}</h2>
-                                        <p className='text-xl pt-35 font-bold'>{slide.subtitle}</p>
-                                        <p className='pt-5 text-lg font-medium w-[400px] '>{slide.desc}</p>
+                                        <p className='text-xl pt-5 lg:pt-35 font-bold'>{slide.subtitle}</p>
+                                        <p className='pt-5 text-lg font-medium w-[300px] lg:w-[400px] '>{slide.desc}</p>
+
                                         <div className='pt-6'>
                                             <Tilt
                                                 tiltAngleYManual={manualTilt2.y}
@@ -111,8 +114,8 @@ const Expertise = () => {
                                             </Tilt>
                                         </div>
                                     </div>
-                                    <div className='relative -top-20'>
-                                        <h2 className={slide.id === 1 ? `relative top-11 left-30 text-[100px] font-bold text-amber-950/10` : `relative top-11 left-30 text-[100px] font-bold text-[#FFFFFFBF] opacity-75`}>0{slide.id}</h2>
+                                    <div className='relative lg:-top-20'>
+                                        <h2 className={slide.id === 1 ? `relative -top-32  lg:top-11 left-55 lg:left-30 md:text-7xl text-5xl lg:text-[100px] font-bold text-amber-950/10` : `relative -top-32 left-55 lg:top-11 lg:left-30 md:text-7xl text-5xl lg:text-[100px] font-bold text-[#FFFFFFBF] opacity-75`}>0{slide.id}</h2>
                                         <div className={slide.id === 1 ? ` border-orange-400 border-8 rotate-5 justify-center items-center w-[250px] h-[380px]  rounded-3xl   overflow-hidden` : `border-white border-8 rotate-5 justify-center items-center w-[250px] h-[380px]  rounded-2xl overflow-hidden  `}>
 
                                             <video

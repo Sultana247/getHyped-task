@@ -1,6 +1,8 @@
 import Banner from '../Components/Banner';
 import Expertise from '../Components/Expertise/Expertise';
 import LearnMore from '../Components/LearnMore';
+import StoryPart from '../Components/Story/StoryPart';
+
 
 
 const Home = () => {
@@ -22,6 +24,8 @@ const Home = () => {
             <LearnMore></LearnMore>
             {/* Expertise */}
             <Expertise></Expertise>
+            {/* Story part */}
+            <StoryPart></StoryPart>
         </div>
     );
 };
