@@ -5,10 +5,10 @@ const StoryPart = () => {
     const [scale, setScale] = useState(1.3);
     const [manualTilt1, setManualTilt1] = useState({ x: 0, y: 0 });
     return (
-        <div className=''>
+        <div className='py-5'>
             <div className=' lg:px-35'>
                 <h1 className='roboto-font font-extrabold text-3xl md:text-6xl lg:text-[100px]'>Content<br />dat scoort.</h1>
-                <p className='pt-5 text-xl md:text-3xl font-medium w-[300px] lg:w-[450px]'>Wij vertellen jouw verhaal. Op een manier die écht past bij jouw doelgroep. Met creatieve content die werkt en het verschil maakt.</p>
+                <p className='pt-5 text-xl md:text-3xl font-medium w-[200px] lg:w-[450px]'>Wij vertellen jouw verhaal. Op een manier die écht past bij jouw doelgroep. Met creatieve content die werkt en het verschil maakt.</p>
                 <div className='py-5' >
                     <Tilt
                         tiltAngleYManual={manualTilt1.y}
@@ -26,7 +26,7 @@ const StoryPart = () => {
                     {/* video container */}
 
                     <video
-                        src='./../../../public/videos/video1.mp4'
+                        src='././videos/video1.mp4'
                         muted // Required for most browsers to allow autoplay/hover play
                         loop
                         playsInline
@@ -35,32 +35,21 @@ const StoryPart = () => {
                             e.target.pause();
                             e.target.currentTime = 0; // Resets video to start when mouse leaves
                         }}
-                        className="w-full h-full rounded-2xl absolute inset-0 object-cover hidden md:block"
+                        className="w-full h-full rounded-2xl absolute inset-0 object-cover "
                     />
 
-                    <h2 className='block md:hidden relative top-5 w-[100px] md:w-[200px] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font text-white'>Van nul naar vol, binnern 3 weken</h2>
-                    <div className='md:hidden block -top-5 left-30 relative overflow-hidden w-6 h-6 lg:w-10 lg:h-10 rounded-full text-black bg-white'>
-                        {/* The First Arrow - Slides out to the bottom-right */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 transition-transform duration-300 ease-in-out group-hover:-translate-x-full group-hover:translate-y-full'>
-                            <FaArrowRight />
-                        </span>
-
-                        {/* The Second Arrow - Slides in from the top-left */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 translate-x-full -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0'>
-                            <FaArrowRight />
-                        </span>
-                    </div>
+                    
                     <div className="absolute bottom-0 left-0 w-full rounded-3xl md:h-[80%] h-[80%] lg:h-[70%] p-2 lg:p-5 ">
 
                         <div
-                            className="bg-orange-500 w-full h-full rounded-t-[20px] hidden md:block"
+                            className="bg-orange-500 w-full h-full rounded-t-[20px] "
                             style={{
                                 clipPath: "polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%)",
                             }}
                         >
                             <div className='flex lg:flex-col flex-row relative top-18 lg:top-30 text-white left-8 lg:left-16'>
                                 <h2 className='w-[100px] md:w-[200px] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font'>Van nul naar vol, binnern 3 weken</h2>
-                                <button className='w-1/3 inline-block lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg'>Built</button>
+                                <button className='w-1/3  lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg hidden md:block'>Built</button>
                             </div>
                             <button href="#" className='relative -top-10 left-35 lg:-top-20 lg:left-65 rounded-full ' >
                                 <Tilt tiltEnable={false} scale={scale} transitionSpeed={2500}>
@@ -96,7 +85,7 @@ const StoryPart = () => {
                     {/* video container */}
 
                     <video
-                        src='./../../../public/videos/video1.mp4'
+                        src='././videos/video1.mp4'
                         muted // Required for most browsers to allow autoplay/hover play
                         loop
                         playsInline
@@ -105,26 +94,15 @@ const StoryPart = () => {
                             e.target.pause();
                             e.target.currentTime = 0; // Resets video to start when mouse leaves
                         }}
-                        className="w-full h-full rounded-2xl absolute inset-0 object-cover hidden md:block"
+                        className="w-full h-full rounded-2xl absolute inset-0 object-cover  "
                     />
-                    <h2 className='block md:hidden relative top-5 w-[100px] md:w-[200px] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font text-white'>Van nul naar vol, binnern 3 weken</h2>
-                    <div className='md:hidden block -top-5 left-30 relative overflow-hidden w-6 h-6 lg:w-10 lg:h-10 rounded-full text-black bg-white'>
-                        {/* The First Arrow - Slides out to the bottom-right */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 transition-transform duration-300 ease-in-out group-hover:-translate-x-full group-hover:translate-y-full'>
-                            <FaArrowRight />
-                        </span>
-
-                        {/* The Second Arrow - Slides in from the top-left */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 translate-x-full -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0'>
-                            <FaArrowRight />
-                        </span>
-                    </div>
+                  
 
 
                     <div className="absolute bottom-0 left-0 w-full rounded-3xl md:h-[80%] h-[80%] lg:h-[70%] p-2 lg:p-5 ">
 
                         <div
-                            className="bg-blue-500 w-full h-full rounded-t-[20px] hidden md:block"
+                            className="bg-blue-500 w-full h-full rounded-t-[20px]  "
                             style={{
                                 clipPath: "polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%)",
                             }}
@@ -132,7 +110,7 @@ const StoryPart = () => {
                             <div className='flex lg:flex-col flex-row relative top-18 lg:top-30 text-white left-8 lg:left-16'>
                                 <h2 className='w-[100px] md:w-[200px]
                                 ] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font'>Van nul naar vol, binnern 3 weken</h2>
-                                <button className='w-1/3 inline-block lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg'>Built</button>
+                                <button className='w-1/3 hidden md:block lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg'>Built</button>
                             </div>
                             <button href="#" className='relative -top-10 left-35 lg:-top-20 lg:left-65 rounded-full ' >
                                 <Tilt tiltEnable={false} scale={scale} transitionSpeed={2500}>
@@ -149,7 +127,7 @@ const StoryPart = () => {
                                                 <span className='absolute inset-0 flex items-center justify-center -rotate-45 translate-x-full -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0'>
                                                     <FaArrowRight />
                                                 </span>
-                                            </div>-
+                                            </div>
                                         </div>
 
                                     </div>
@@ -168,7 +146,7 @@ const StoryPart = () => {
                     {/* video container */}
 
                     <video
-                        src='./../../../public/videos/video1.mp4'
+                        src='././videos/video1.mp4'
                         muted // Required for most browsers to allow autoplay/hover play
                         loop
                         playsInline
@@ -177,26 +155,14 @@ const StoryPart = () => {
                             e.target.pause();
                             e.target.currentTime = 0; // Resets video to start when mouse leaves
                         }}
-                        className="w-full h-full rounded-2xl absolute inset-0 object-cover hidden md:block"
+                        className="w-full h-full rounded-2xl absolute inset-0 object-cover  "
                     />
-                    <h2 className='block md:hidden relative top-5 w-[100px] md:w-[200px] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font text-white'>Van nul naar vol, binnern 3 weken</h2>
-                    <div className='md:hidden block -top-5 left-30 relative overflow-hidden w-6 h-6 lg:w-10 lg:h-10 rounded-full text-black bg-white'>
-                        {/* The First Arrow - Slides out to the bottom-right */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 transition-transform duration-300 ease-in-out group-hover:-translate-x-full group-hover:translate-y-full'>
-                            <FaArrowRight />
-                        </span>
-
-                        {/* The Second Arrow - Slides in from the top-left */}
-                        <span className='absolute inset-0 flex items-center justify-center -rotate-45 translate-x-full -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0'>
-                            <FaArrowRight />
-                        </span>
-                    </div>
-
+                    
 
                     <div className="absolute bottom-0 left-0 w-full rounded-3xl md:h-[80%] h-[80%] lg:h-[70%] p-2 lg:p-5 ">
 
                         <div
-                            className="bg-green-500 w-full h-full rounded-t-[20px] hidden md:block"
+                            className="bg-green-500 w-full h-full rounded-t-[20px]  "
                             style={{
                                 clipPath: "polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%)",
                             }}
@@ -204,7 +170,7 @@ const StoryPart = () => {
                             <div className='flex lg:flex-col flex-row relative top-18 lg:top-30 text-white left-8 lg:left-16'>
                                 <h2 className='w-[100px] md:w-[200px]
                                 ] text-sm lg:text-xl font-bold lg:font-extrabold roboto-font'>Van nul naar vol, binnern 3 weken</h2>
-                                <button className='w-1/3 inline-block lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg'>Built</button>
+                                <button className='w-1/3 hidden md:block lg:mt-4 bg-white/30  lg:px-3 lg:py-1 text-[14px] rounded-lg'>Built</button>
                             </div>
                             <button href="#" className='relative -top-10 left-35 lg:-top-20 lg:left-65 rounded-full ' >
                                 <Tilt tiltEnable={false} scale={scale} transitionSpeed={2500}>
@@ -221,7 +187,7 @@ const StoryPart = () => {
                                                 <span className='absolute inset-0 flex items-center justify-center -rotate-45 translate-x-full -translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0'>
                                                     <FaArrowRight />
                                                 </span>
-                                            </div>-
+                                            </div>
                                         </div>
 
                                     </div>

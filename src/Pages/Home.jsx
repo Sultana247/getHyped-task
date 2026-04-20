@@ -1,4 +1,5 @@
 import Banner from '../Components/Banner';
+import Brands from '../Components/Brands';
 import Expertise from '../Components/Expertise/Expertise';
 import LearnMore from '../Components/LearnMore';
 import StoryPart from '../Components/Story/StoryPart';
@@ -26,6 +27,8 @@ const Home = () => {
             <Expertise></Expertise>
             {/* Story part */}
             <StoryPart></StoryPart>
+            {/* Brands Part */}
+            <Brands></Brands>
         </div>
     );
 };

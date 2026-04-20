@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { BsFire } from "react-icons/bs";
 import { Link } from 'react-router';
@@ -15,9 +15,13 @@ const Header = () => {
             <Link to={'/contact'}><button className='btn rounded-xl bg-white px-5 py-6 text-2xl'>Contact</button></Link>
         </>
 
+      
+
+
     return (
-        <div>
-            <div className="navbar items-center mb-18">
+       
+      <div>
+            <div className="navbar items-center mb-18 fixed z-100">
                 <div className="navbar-start">
                     <img src="https://i.ibb.co.com/F4Qs5vyp/logo.png" alt="get hyped logo" className="h-15 w-40 lg:w-45 z-10" />
                 </div>
@@ -69,6 +73,8 @@ const Header = () => {
                 </div>
             </div>
         </div>
+   
+        
     );
 };
 

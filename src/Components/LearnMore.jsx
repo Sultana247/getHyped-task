@@ -13,9 +13,9 @@ const LearnMore = () => {
                     className='hidden md:block md:w-50 md:h-70 lg:w-55 lg:h-75 rounded-xl'
                 />
             </div>
-            <div className='rotate-5 md:hidden justify-center items-center w-[340px] h-[550px] rounded-[40px] flex  overflow-hidden  '>
+            <div className='rotate-5 md:hidden justify-center items-center w-[270px] h-[550px] rounded-[40px] flex  overflow-hidden  '>
                 <video
-                  src="../../public/videos/video1.mp4"
+                  src="../../videos/video1.mp4"
                   autoPlay
                   muted
                   loop

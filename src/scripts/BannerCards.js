@@ -1,5 +1,5 @@
-import video1 from "./../../public/videos/video1.mp4"
-import video2 from "./../../public/videos/video2.mp4"
+import video1 from "/videos/video1.mp4"
+import video2 from "/videos/video2.mp4"
 export const BannerCards = [
   {
     id: 1,

@@ -1,0 +1,39 @@
+import React from 'react';
+import Marquee from "react-fast-marquee";
+import ShareBrand from '../Shared Components/ShareBrand';
+
+const Brands = () => {
+    console.log(Marquee)
+  return (
+    <div className='py-10'>
+      <h2 className='text-xl md:text-3xl lg:text-5xl font-extrabold pb-10'>
+        These brands <br /> got hyped.
+      </h2>
+        <div className="w-[270px] md:w-full overflow-hidden flex justify-center">
+  <Marquee.default
+    speed={120}
+    gradient={false}
+    pauseOnClick
+    className="flex items-center"
+  >
+        
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d85341bf0d7476e56a8c_fides.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68c1952f22281ee50d3620b5_zclv.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d838fc5735f090bd9843_SRHK.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d81e72e08110e3fd1a17_knltb.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d880bed5996600cbc586_seesing-flex.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/69241146b4df63c4ca966552_Bullit%20Digital.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d86cd6ba384af3c14e58_graafschap-college.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/684c05642bf8f5cea7384403_de-talententuin.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/68c194e6d1b186563459b107_morssinkhof.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/684b062ebc242028ca4b3ea1_tho.svg'}></ShareBrand>
+        <ShareBrand link={'https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d88f755388cc2c74ecff_salontopper.svg'}></ShareBrand>
+       
+
+        </Marquee.default>
+     </div>
+    </div>
+  );
+};
+
+export default Brands;
